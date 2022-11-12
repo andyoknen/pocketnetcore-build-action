@@ -1,0 +1,25 @@
+name: 'PocketnetCore build action'
+description: 'Build PocketnetCore installers & binaries with selected branch or tag'
+branding:
+  icon: layers
+  color: orange
+inputs:
+  platform:
+    description: 'Destination platform (win, unix, macos)'
+    required: true
+    default: 'unix'
+  branch:
+    description: 'Specific Branch for building'
+    required: true
+    default: 'main'
+  tag:
+    description: 'Specific tag for building'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    PLATFORM: ${{ inputs.platform }}
+    BRANCH: ${{ inputs.branch }}
+    TAG: ${{ inputs.tag }}
