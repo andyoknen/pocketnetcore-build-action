@@ -15,7 +15,7 @@ inputs:
   depsBase:
     description: 'Base branch for use dependencies'
     required: true
-    default: '0.21'
+    default: '0.22'
   tag:
     description: 'Specific tag for building'
     required: false
