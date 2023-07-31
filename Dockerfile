@@ -1,3 +1,3 @@
-FROM andyoknen/pocketnetcore.build:0.6
+FROM andyoknen/pocketnetcore.build:latest
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
