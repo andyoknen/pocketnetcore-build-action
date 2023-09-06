@@ -15,5 +15,5 @@ ln -s $GITHUB_WORKSPACE/out /out
 
 /build -p $PLATFORM -b $BRANCH -d $DEPSBASE $tagarg
 
-ls -la /out/
-ls -la $GITHUB_WORKSPACE/out/
+cd /out
+ls -la ./
