@@ -10,10 +10,7 @@ if ! [[ $TAG = "" ]] ; then
     tagarg="-t ${TAG}"
 fi
 
-mkdir $GITHUB_WORKSPACE/out
-ln -s $GITHUB_WORKSPACE/out /out
-
 /build -p $PLATFORM -b $BRANCH -d $DEPSBASE $tagarg
 
-cd /out
-ls -la ./
+mkdir $GITHUB_WORKSPACE/out
+cp /out/* $GITHUB_WORKSPACE/out/
