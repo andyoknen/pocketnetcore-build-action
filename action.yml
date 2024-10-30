@@ -12,10 +12,6 @@ inputs:
     description: 'Specific branch for building'
     required: true
     default: 'main'
-  depsBase:
-    description: 'Base branch for use dependencies'
-    required: true
-    default: '0.22'
   tag:
     description: 'Specific tag for building'
     required: false
@@ -26,5 +22,4 @@ runs:
   env:
     PLATFORM: ${{ inputs.platform }}
     BRANCH: ${{ inputs.branch }}
-    DEPSBASE: ${{ inputs.depsBase }}
     TAG: ${{ inputs.tag }}
